@@ -28,7 +28,7 @@ echo -e " \033[0;35m════════════════════
 
 hy_install() {
     fetch_valid_keys() {
-        keys=$(curl -s "https://raw.githubusercontent.com/Dexter-Hysteria/Voltssh-Udp/mtk_vpn/json_key/key.json") # Replace with the actual URL to fetch the keys
+        keys=$(curl -s "https://raw.githubusercontent.com/JohnReaJR/Infinity/main/json_key/key.json") # Replace with the actual URL to fetch the keys
         echo "$keys"
     }
 
@@ -715,7 +715,7 @@ EOF
 
 service stunnel4 restart
 
-wget -O /usr/bin/badvpn-udpgw "https://github.com/Dexter-Hysteria/status/raw/mtk_vpn/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/JohnReaJR/Rn/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000 --max-connections-for-client 10 --client-socket-sndbuf 10000
 
